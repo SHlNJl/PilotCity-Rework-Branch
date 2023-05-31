@@ -914,7 +914,6 @@ Play State
           if (commandData.command === 'up') {
               //call client code that will react on the received command
               _this.upOn();
-              
           }
           if (commandData.command === 'right') {
               //call client code that will react on the received command

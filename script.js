@@ -902,12 +902,8 @@ Play State
 
   StatePlay.prototype.keydown = function( e ) {
     e.preventDefault();
-    var e = ( e.keyCode ? e.keyCode : e.which ),
-      _this = g.currentState();
-    if( e === 38 || e === 87 ) { _this.upOn(); }
-    if( e === 39 || e === 68 ) { _this.rightOn(); }
-    if( e === 40 || e === 83 ) { _this.downOn(); }
-    if( e === 37 || e === 65 ) { _this.leftOn(); }
+
+    //Alan AI Controls
     var alanBtnInstance = alanBtn({
       key: "f972626365339872bbc2eced81cfcd2f2e956eca572e1d8b807a3e2338fdd0dc/stage",
       onCommand: function (commandData) {
@@ -930,6 +926,14 @@ Play State
       },
       rootEl: document.getElementById("alan-btn"),
     });
+    alanBtnInstance.activate();
+
+    var e = ( e.keyCode ? e.keyCode : e.which ),
+      _this = g.currentState();
+    if( e === 38 || e === 87 ) { _this.upOn(); }
+    if( e === 39 || e === 68 ) { _this.rightOn(); }
+    if( e === 40 || e === 83 ) { _this.downOn(); }
+    if( e === 37 || e === 65 ) { _this.leftOn(); }
   };
 
   StatePlay.prototype.bindEvents = function() {

@@ -926,7 +926,6 @@ Play State
       },
       rootEl: document.getElementById("alan-btn"),
     });
-    alanBtnInstance.activate();
 
     var e = ( e.keyCode ? e.keyCode : e.which ),
       _this = g.currentState();
